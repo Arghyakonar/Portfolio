@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Arghya Konar — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- CURSOR GLOW -->
+<div id="cursor-glow"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">AK<span class="dot">.</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="about">
+  <div class="hero-grid"></div>
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <!-- Particle canvas fills hero -->
+  <canvas id="particle-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;opacity:0.7;"></canvas>
+
+  <div class="hero-inner" style="z-index:3;">
+    <div>
+      <div class="hero-available">
+        <div class="avail-dot"></div>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">
+        Arghya<br/>
+        <span class="stroke-text">Konar</span>
+      </h1>
+      <p class="hero-subtitle-tag">
+        <span id="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
+      <p class="hero-desc">
+        Detail-oriented CSE graduate with hands-on experience in server infrastructure, Linux administration, and full-stack development. Passionate about automation, DevOps practices, and building AI-powered tools.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-hot">Get In Touch →</a>
+        <a href="#projects" class="btn-ghost">View Projects ↓</a>
+        <a href="ArghyaKonarCV.pdf" download="ArghyaKonar_CV.pdf" class="btn-cv">
+          <span class="cv-icon">↓</span> Download CV
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-orbit">
+        <div class="orbit-ring"><div class="orbit-dot"></div></div>
+        <div class="orbit-ring"><div class="orbit-dot"></div></div>
+        <div class="avatar-core">
+          <div class="avatar-initials">AK</div>
+        </div>
+      </div>
+      <div class="hero-chip c1">
+        <div class="chip-dot hot"></div>
+        Linux Expert
+      </div>
+      <div class="hero-chip c2">
+        <div class="chip-dot lime"></div>
+        GPA 8.1 / 10
+      </div>
+      <div class="hero-chip c3">
+        <div class="chip-dot cyan"></div>
+        Full Stack Dev
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS MARQUEE ===== -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <!-- first copy -->
+    <div class="marquee-item"><div class="mi-dot" style="background:#ff2d78;box-shadow:0 0 6px #ff2d78;"></div><strong>1+</strong> Year Experience</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#00e5ff;box-shadow:0 0 6px #00e5ff;"></div><strong>8.1</strong> B.Tech GPA</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#b8ff00;box-shadow:0 0 6px #b8ff00;"></div><strong>3+</strong> Projects Built</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#bf5fff;box-shadow:0 0 6px #bf5fff;"></div><strong>10+</strong> Technologies</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#ff9500;box-shadow:0 0 6px #ff9500;"></div>Linux · React · Python · Spring Boot</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#ff2d78;box-shadow:0 0 6px #ff2d78;"></div>Bare Metal · VPS · cPanel · WHMCS</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#00e5ff;box-shadow:0 0 6px #00e5ff;"></div>LLM · HuggingFace · OpenAI</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#b8ff00;box-shadow:0 0 6px #b8ff00;"></div>Durgapur, West Bengal 🇮🇳</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><div class="mi-dot" style="background:#ff2d78;box-shadow:0 0 6px #ff2d78;"></div><strong>1+</strong> Year Experience</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#00e5ff;box-shadow:0 0 6px #00e5ff;"></div><strong>8.1</strong> B.Tech GPA</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#b8ff00;box-shadow:0 0 6px #b8ff00;"></div><strong>3+</strong> Projects Built</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#bf5fff;box-shadow:0 0 6px #bf5fff;"></div><strong>10+</strong> Technologies</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#ff9500;box-shadow:0 0 6px #ff9500;"></div>Linux · React · Python · Spring Boot</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#ff2d78;box-shadow:0 0 6px #ff2d78;"></div>Bare Metal · VPS · cPanel · WHMCS</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#00e5ff;box-shadow:0 0 6px #00e5ff;"></div>LLM · HuggingFace · OpenAI</div>
+    <div class="marquee-item"><div class="mi-dot" style="background:#b8ff00;box-shadow:0 0 6px #b8ff00;"></div>Durgapur, West Bengal 🇮🇳</div>
+  </div>
+</div>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">
+      <div class="eyebrow-line hot"></div>
+      <span class="eyebrow-text hot">Technical Arsenal</span>
+    </div>
+    <h2 class="section-title reveal">Skills &amp; <span class="hl-hot">Technologies</span></h2>
+    <div class="skills-grid">
+
+      <div class="skill-card hot-card reveal">
+        <span class="skill-icon">🖥️</span>
+        <h4>Languages &amp; Scripting</h4>
+        <div class="tags">
+          <span class="tag t-hot">Python</span>
+          <span class="tag t-hot">Bash</span>
+          <span class="tag t-muted">Java</span>
+          <span class="tag t-muted">JavaScript</span>
+          <span class="tag t-muted">HTML / CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-card cyan-card reveal">
+        <span class="skill-icon">⚙️</span>
+        <h4>Server &amp; Infrastructure</h4>
+        <div class="tags">
+          <span class="tag t-cyan">Linux Ubuntu/CentOS</span>
+          <span class="tag t-cyan">Windows Server</span>
+          <span class="tag t-cyan">Bare Metal</span>
+          <span class="tag t-cyan">Docker</span>
+          <span class="tag t-cyan">SSH / RDP</span>
+        </div>
+      </div>
+
+      <div class="skill-card lime-card reveal">
+        <span class="skill-icon">🌐</span>
+        <h4>Web &amp; Frameworks</h4>
+        <div class="tags">
+          <span class="tag t-lime">ReactJS</span>
+          <span class="tag t-lime">Spring Boot</span>
+          <span class="tag t-lime">Streamlit</span>
+          <span class="tag t-muted">OpenAI API</span>
+          <span class="tag t-muted">LangChain</span>
+        </div>
+      </div>
+
+      <div class="skill-card amber-card reveal">
+        <span class="skill-icon">🛠️</span>
+        <h4>Hosting &amp; DevOps</h4>
+        <div class="tags">
+          <span class="tag t-amber">Virtualizor</span>
+          <span class="tag t-amber">cPanel / WHM</span>
+          <span class="tag t-amber">WHMCS</span>
+          <span class="tag t-muted">Git</span>
+          <span class="tag t-muted">Postman</span>
+        </div>
+      </div>
+
+      <div class="skill-card hot-card reveal">
+        <span class="skill-icon">🤖</span>
+        <h4>AI / Data</h4>
+        <div class="tags">
+          <span class="tag t-hot">HuggingFace</span>
+          <span class="tag t-hot">LLMs</span>
+          <span class="tag t-muted">MySQL</span>
+          <span class="tag t-muted">Excel</span>
+          <span class="tag t-muted">Data Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-card cyan-card reveal">
+        <span class="skill-icon">💬</span>
+        <h4>Tools &amp; Design</h4>
+        <div class="tags">
+          <span class="tag t-cyan">VS Code</span>
+          <span class="tag t-cyan">Figma</span>
+          <span class="tag t-muted">PuTTY / WinSCP</span>
+          <span class="tag t-muted">Postman</span>
+          <span class="tag t-muted">Git / GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">
+      <div class="eyebrow-line amber"></div>
+      <span class="eyebrow-text amber">Work History</span>
+    </div>
+    <h2 class="section-title reveal">Professional <span class="hl-amber">Experience</span></h2>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div>
+            <div class="tl-company c-hot">DigiRDP</div>
+            <div class="tl-role">Linux Technical Associate</div>
+          </div>
+          <span class="tl-date">Apr 2025 – Present</span>
+        </div>
+        <ul class="tl-points">
+          <li>Proactively managed and troubleshot Bare Metal Dedicated Servers, ensuring high uptime for enterprise-grade hardware.</li>
+          <li>Deployed and maintained Linux VPS and Windows RDP environments using Virtualizor and Tenant OS management.</li>
+          <li>Automated hosting operations and account provisioning via cPanel and WHMCS to improve service delivery efficiency.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-dot cyan-dot" style="border-color:var(--cyan);box-shadow:0 0 12px rgba(0,229,255,0.5);animation:none;"></div>
+        <div class="tl-header">
+          <div>
+            <div class="tl-company c-cyan">Zidio Development</div>
+            <div class="tl-role">Java Full Stack Development Intern</div>
+          </div>
+          <span class="tl-date">Internship</span>
+        </div>
+        <ul class="tl-points">
+          <li>Developed an enterprise expense management system streamlining financial tracking and reporting.</li>
+          <li>Built a React.js front-end, Spring Boot backend, and MySQL data layer for a fully scalable solution.</li>
+          <li>Delivered a robust end-to-end application for managing company-wide expenses with real-time reporting.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">
+      <div class="eyebrow-line cyan"></div>
+      <span class="eyebrow-text cyan">Work Showcase</span>
+    </div>
+    <h2 class="section-title reveal">Featured <span class="hl-cyan">Projects</span></h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="proj-stripe"></div>
+        <div class="proj-num">01</div>
+        <p class="proj-date">February 2024</p>
+        <div class="proj-title">Enhanced Research Assistant</div>
+        <p class="proj-desc">LLM-powered research tool that tackles PDFs, CSVs, and websites. Helps researchers gather information, analyze data, and gain insights efficiently using state-of-the-art AI tooling.</p>
+        <div class="tags">
+          <span class="tag t-hot">Python</span>
+          <span class="tag t-hot">LangChain</span>
+          <span class="tag t-hot">OpenAI</span>
+          <span class="tag t-muted">Streamlit</span>
+          <span class="tag t-muted">HuggingFace</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="proj-stripe"></div>
+        <div class="proj-num">02</div>
+        <p class="proj-date">January 2021</p>
+        <div class="proj-title">Smart Attendance System</div>
+        <p class="proj-desc">Automated attendance using Python and machine learning with face detection for accurate identification — replacing manual processes with intelligent facial recognition and DBMS integration.</p>
+        <div class="tags">
+          <span class="tag t-lime">Python</span>
+          <span class="tag t-lime">Machine Learning</span>
+          <span class="tag t-lime">Face Detection</span>
+          <span class="tag t-muted">DBMS</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="proj-stripe"></div>
+        <div class="proj-num">03</div>
+        <p class="proj-date">Internship Project</p>
+        <div class="proj-title">Enterprise Expense Manager</div>
+        <p class="proj-desc">Full-stack enterprise application for financial tracking and reporting. Scalable architecture with a modern React frontend, Spring Boot REST API, and MySQL relational database backend.</p>
+        <div class="tags">
+          <span class="tag t-cyan">React.js</span>
+          <span class="tag t-cyan">Spring Boot</span>
+          <span class="tag t-muted">MySQL</span>
+          <span class="tag t-muted">Java</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">
+      <div class="eyebrow-line lime"></div>
+      <span class="eyebrow-text lime">Academic Background</span>
+    </div>
+    <h2 class="section-title reveal">Education &amp; <span class="hl-lime">Qualifications</span></h2>
+    <div class="edu-grid">
+
+      <div class="edu-card reveal">
+        <div class="edu-badge cyan">🎓 B.Tech</div>
+        <div class="edu-degree">Computer Science &amp; Engineering</div>
+        <div class="edu-school">Asansol Engineering College</div>
+        <div class="edu-year">Aug 2021 – Jun 2024</div>
+        <div class="edu-score">⚡ GPA 8.1 / 10.0</div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-badge hot">📐 Diploma</div>
+        <div class="edu-degree">Computer Science &amp; Technology</div>
+        <div class="edu-school">Asansol Institute of Engineering &amp; Management</div>
+        <div class="edu-year">Jun 2018 – May 2021</div>
+        <div class="edu-score">⚡ 73.6%</div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-badge cyan">📚 Class X</div>
+        <div class="edu-degree">CBSE Secondary School</div>
+        <div class="edu-school">D.A.V Public School, Asansol</div>
+        <div class="edu-year">June 2018</div>
+        <div class="edu-score">⚡ 58.6%</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="contact-inner">
+      <div class="reveal">
+        <div class="section-eyebrow" style="margin-bottom:0.75rem;">
+          <div class="eyebrow-line hot"></div>
+          <span class="eyebrow-text hot">Let's Connect</span>
+        </div>
+        <h2 class="contact-big">
+          Ready to build<br/>
+          something <span style="color:var(--hot);">great?</span>
+        </h2>
+        <p class="contact-desc">
+          I'm actively seeking new opportunities in Linux administration, DevOps, or full stack development. Whether you have a project, a role, or just want to talk tech — I'm all ears.
+        </p>
+        <a href="mailto:arghyakonar39@gmail.com" class="btn-hot">Send Email →</a>
+      </div>
+      <div class="contact-links reveal">
+        <a href="mailto:arghyakonar39@gmail.com" class="clink hot-link">
+          <div class="clink-icon hot">✉️</div>
+          <div>
+            <div class="clink-label">Email</div>
+            <div class="clink-val">arghyakonar39@gmail.com</div>
+          </div>
+          <div class="clink-arrow">→</div>
+        </a>
+        <a href="tel:+917001054938" class="clink hot-link">
+          <div class="clink-icon hot">📱</div>
+          <div>
+            <div class="clink-label">Phone</div>
+            <div class="clink-val">+91 7001054938</div>
+          </div>
+          <div class="clink-arrow">→</div>
+        </a>
+        <a href="#" class="clink cyan-link">
+          <div class="clink-icon cyan">💼</div>
+          <div>
+            <div class="clink-label">LinkedIn</div>
+            <div class="clink-val">Arghya Konar</div>
+          </div>
+          <div class="clink-arrow">→</div>
+        </a>
+        <a href="https://github.com/Arghyakonar" target="_blank" rel="noopener noreferrer" class="clink cyan-link">
+          <div class="clink-icon lime">🐙</div>
+          <div>
+            <div class="clink-label">GitHub</div>
+            <div class="clink-val">github.com/Arghyakonar</div>
+          </div>
+          <div class="clink-arrow">→</div>
+        </a>
+        <a href="ArghyaKonarCV.pdf" download="ArghyaKonar_CV.pdf" class="clink cv-dl-link">
+          <div class="clink-icon" style="background:rgba(184,255,0,0.1);">📄</div>
+          <div>
+            <div class="clink-label">Resume / CV</div>
+            <div class="clink-val">Download PDF ↓</div>
+          </div>
+          <div class="clink-arrow" style="color:var(--lime);">↓</div>
+        </a>
+        <div class="clink" style="cursor:default;">
+          <div class="clink-icon" style="background:rgba(255,149,0,0.1);">📍</div>
+          <div>
+            <div class="clink-label">Location</div>
+            <div class="clink-val">Panagarh, West Bengal, India</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2025 Arghya Konar. All rights reserved.</div>
+  <div style="color:var(--hot);">Built with passion · Open to opportunities</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
